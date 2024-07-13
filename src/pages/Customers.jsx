@@ -156,14 +156,14 @@ function Customers() {
         </div>
 
         {/* data table */}
-        <div className="flex flex-col gap-4 bg-white p-2 md:p-3 lg:p-10 lg:py-9 rounded-xl shadow-lg">
+        <div className="flex flex-col w-auto gap-4 bg-white p-2 md:p-3 lg:p-10 lg:py-9 rounded-xl shadow-lg">
           {/* all customers */}
           <div className="flex justify-between items-center">
             <div className="flex flex-col gap-2">
-              <h2 className="text-[22px] md:text-2xl lg:text-3xl leading-[33px] font-[600]">
+              <h2 className="text-[12px] md:text-2xl lg:text-3xl leading-[33px] font-[600]">
                 All Customers
               </h2>
-              <p className="text-[14px] font-[400] text-[#16C098]">
+              <p className="text-[10px] md:text-[14px] lg:text-[22px] font-[400] text-[#16C098]">
                 Active Members
               </p>
             </div>
@@ -191,22 +191,22 @@ function Customers() {
             </div>
           </div>
           {/* table section */}
-          <table className="table-auto md:w-full md:overflow-x-scroll lg:w-full ">
+          <table className="table-auto md:overflow-x-scroll">
             <thead className="border-b-2 border-gray-200">
-              <tr className="text-[#B5B7C0] text-[14px]">
-                <th className="p-3 text-sm font-semibold tracking-wide text-left">
+              <tr className="text-[#B5B7C0] text-[11px] md:text-[12px] lg:text-[14px]">
+                <th className="p-3 font-semibold tracking-wide text-left">
                   Customer Name
                 </th>
-                <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                <th className="p-3 font-semibold tracking-wide text-left">
                   Company
                 </th>
-                <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                <th className="p-3 font-semibold tracking-wide text-left">
                   Phone Number
                 </th>
-                <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                <th className="p-3 font-semibold tracking-wide text-left">
                   Email
                 </th>
-                <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                <th className="p-3 font-semibold tracking-wide text-left">
                   Country
                 </th>
                 <th className="p-3 text-sm font-semibold tracking-wide text-left">
@@ -214,23 +214,31 @@ function Customers() {
                 </th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="overflow-y-scroll">
               {tableData.map((data, i) => (
                 <tr key={i} className={`text-[#333333] hover:bg-gray-100`}>
-                  <td className="text-[14px] py-3 px-2">
+                  <td className="text-[0.5rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2">
                     {data.customer_name}
                   </td>
-                  <td className="text-[14px] py-4 px-2">{data.company}</td>
-                  <td className="text-[14px] py-4 px-2">{data.phoneNumber}</td>
-                  <td className="text-[14px] py-4 px-2">{data.email}</td>
-                  <td className="text-[14px] py-4 px-2">{data.country}</td>
-                  <td className="text-[14px] py-4 px-2 flex justify-center">
+                  <td className="text-[0.5rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2">
+                    {data.company}
+                  </td>
+                  <td className="text-[0.5rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2">
+                    {data.phoneNumber}
+                  </td>
+                  <td className="text-[0.5rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2">
+                    {data.email}
+                  </td>
+                  <td className="text-[0.5rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2">
+                    {data.country}
+                  </td>
+                  <td className="text-[0.5rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2 flex justify-center">
                     {data.isActive ? (
-                      <span className="border border-[#008767] font-[500] bg-[#16C09861] w-[80px] text-[14px] py-1 px-4 rounded-[3px] text-[#008767]">
+                      <span className="border border-[#008767] font-[500] bg-[#16C09861] w-[65px] md:w-[75px] lg:w-[80px] text-[10px] md:text-[12px] lg:text-[14px] py-1 px-4 rounded-[3px] text-[#008767]">
                         Active
                       </span>
                     ) : (
-                      <span className="border border-[#DF0404] text-center font-[500] bg-[#FFC5C5] w-[80px] text-[14px] py-1 px-4 rounded-[3px] text-[#DF0404]">
+                      <span className="border border-[#DF0404] text-center font-[500] bg-[#FFC5C5] w-[65px] md:w-[75px] lg:w-[80px] text-[10px] md:text-[12px] lg:text-[14px] py-1 px-4 rounded-[3px] text-[#DF0404]">
                         Inactive
                       </span>
                     )}
