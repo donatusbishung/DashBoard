@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.register_section {
+  font-family: "Commissioner", sans-serif;
+}
+
+.sideBar__section {
+  font-family: "Poppins", sans-serif;
+}
+
+input[type="checkbox"] {
+  accent-color: #ef498f1f;
+  /* background-color: #ef498f1f; */
+  opacity: 16%;
+  color: black;
+}
+
+li.active {
+  background-color: #5932ea;
+  color: white;
+  /* padding: 0.5em; */
+}
+
+.inline-flex:hover {
+  background-color: #5932ea;
+  color: white;
+}
