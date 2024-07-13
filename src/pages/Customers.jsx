@@ -156,7 +156,7 @@ function Customers() {
         </div>
 
         {/* data table */}
-        <div className="flex flex-col gap-4 bg-white p-2 md:p-3 lg:p-10 lg:py-9 rounded-xl overflow-y-auto shadow-lg">
+        <div className="flex flex-col gap-4 bg-white p-2 md:p-3 lg:p-10 lg:py-9 rounded-xl shadow-lg">
           {/* all customers */}
           <div className="flex justify-between items-center">
             <div className="flex flex-col gap-2">
