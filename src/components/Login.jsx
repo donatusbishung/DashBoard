@@ -12,15 +12,22 @@ import {
 } from "../Firebase/auth";
 import { useAuth } from "../contexts/AuthContext";
 import { toast } from "react-toastify";
+import { ImSpinner6 } from "react-icons/im";
+
 function Login() {
   // const { userLoggedIn } = useAuth();
   // console.log(useAuth);
   const navigate = useNavigate();
   const [isSigningIn, setIsSigningIn] = useState(false);
+  const [loading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+
+  const loadSpiner = () => {
+    setIsLoading(true);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -123,10 +130,11 @@ function Login() {
           </div>
           <button
             // onClick={handleNext}
+            onClick={loadSpiner}
             type="submit"
             disabled={isSigningIn}
-            className="p-3 bg-blue-hover cursor-pointer rounded-xl text-white font-[600] text-[16px] mb-0">
-            {isSigningIn ? "Loging In" : "Login"}
+            className="p-3 bg-blue-hover cursor-pointer rounded-xl flex justify-center text-white font-[600] text-[16px] mb-0">
+            {loading ? <ImSpinner6 /> : "Login"}
           </button>
           <div className="flex items-center gap-2 mt-0">
             <input type="checkbox" className="h-[16px] w-[16p]" />
