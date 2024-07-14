@@ -33,10 +33,10 @@ function Authentication() {
   };
 
   return (
-    <div className="register_section h-[100vh] md:h-[100vh] lg:h-[100vh] flex flex-col justify-center items-center">
-      <div className="bg-white shadow-2xl p-6 rounded-[24px] sm:w-[80%] md:w-[70%] lg:w-[50%] xl:w-[40%]">
+    <div className="register_section m-3 md:m-0 lg:m-0 h-[100vh] md:h-[100vh] lg:h-[100vh] flex flex-col justify-center items-center">
+      <div className="bg-white shadow-2xl rounded-[24px] sm:w-[80%] md:w-[70%] lg:w-[50%] xl:w-[40%]">
         {step === 1 && (
-          <nav className="flex justify-between">
+          <nav className="flex justify-between p-6 pb-0">
             <div className="flex justify-between gap-8">
               <h3
                 onClick={handleRegister}
@@ -64,7 +64,7 @@ function Authentication() {
           </nav>
         )}
         {step !== 1 && (
-          <nav className="hidden">
+          <nav className="hidden opacity-0">
             <div className="flex justify-between gap-8">
               <h3
                 onClick={handleRegister}

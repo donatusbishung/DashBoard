@@ -100,18 +100,23 @@ function Customers() {
           </div>
         </div>
         {/* demo details */}
-        <div className="flex flex-col sm:gap-3 md:flex-row md:gap-3 lg:flex-row lg:gap-3 xl:flex-row xl:gap-3 justify-between items-center rounded-xl py-4 px-2 md:p-6 lg:p-8 bg-white shadow-lg">
+        <div className="flex flex-col sm:gap-4 md:flex-row md:gap-3 w-full lg:flex-row lg:gap-3 xl:flex-row xl:gap-3 justify-between items-start md:items-center lg:items-center rounded-xl py-4 px-3 md:overflow-x-scroll lg:overflow-hidden md:p-6 lg:p-6 bg-white shadow-lg">
           <div className="flex justify-between items-center gap-3 md:border-0 md:pr-0 lg:border-r lg:pr-16">
             <div className="rounded-full bg-gradient-to-b from-[#D3FFE7] via-[100%] to-[#EFFFF6] p-2 md:p-3 lg:p-5">
-              <LuUsers2 className="w-10 h-10 text-[#00AC4F]" />
+              <LuUsers2 className="w-7 h-7 lg:w-10 lg:h-10 text-[#00AC4F]" />
             </div>
             <div className="flex flex-col items-start gap-1">
               <p className="text-sm text-[#ACACAC] leading-5">Members</p>
-              <h1 className="font-semibold text-xl md:text-2xl lg:text-2xl leading-8 text-[#333333]">
+              <h1 className="font-semibold inline-flex gap-2 text-[16px] md:text-2xl lg:text-2xl leading-8 text-[#333333]">
                 5,423
+                <span className="flex md:hidden lg:hidden items-center gap-1 text-[#292D32] text-xs leading-4">
+                  <RiArrowUpLine className="text-green-500 w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" />
+                  <span className="text-green-500">16%</span>
+                  this month
+                </span>
               </h1>
-              <p className="flex items-center gap-1 text-[#292D32] text-xs leading-4">
-                <RiArrowUpLine className="text-green-500 w-5 h-5" />
+              <p className="hidden md:flex lg:flex items-center gap-1 text-[#292D32] text-xs leading-4">
+                <RiArrowUpLine className="text-green-500 w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" />
                 <span className="text-green-500">16%</span>
                 this month
               </p>
@@ -120,17 +125,22 @@ function Customers() {
 
           <div className="flex justify-between items-center gap-3 md:border-0 md:pr-0 lg:border-r lg:pr-16">
             <div className="rounded-full bg-gradient-to-b from-[#D3FFE7] via-[100%] to-[#EFFFF6] p-2 md:p-3 lg:p-5">
-              <RiUserFollowLine className="w-10 h-10 text-[#00AC4F]" />
+              <RiUserFollowLine className="w-7 h-7 lg:w-10 lg:h-10 text-[#00AC4F]" />
             </div>
             <div className="flex flex-col items-start gap-1">
               <p className="text-sm text-[#ACACAC] leading-5">
                 Total Customers
               </p>
-              <h1 className="font-semibold text-xl md:text-2xl lg:text-2xl leading-8 text-[#333333]">
+              <h1 className="font-semibold inline-flex gap-2 text-[16px] md:text-2xl lg:text-2xl leading-8 text-[#333333]">
                 1,893
+                <span className="flex md:hidden lg:hidden items-center gap-1 text-[#292D32] text-xs leading-4">
+                  <RiArrowDownLine className="text-red-500 w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" />
+                  <span className="text-red-500">1%</span>
+                  this month
+                </span>
               </h1>
-              <p className="flex items-center gap-1 text-[#292D32] text-xs leading-4">
-                <RiArrowDownLine className="text-red-500 w-5 h-5" />
+              <p className="hidden md:flex lg:flex items-center gap-1 text-[#292D32] text-xs leading-4">
+                <RiArrowDownLine className="text-red-500 w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" />
                 <span className="text-red-500">1%</span>
                 this month
               </p>
@@ -139,15 +149,20 @@ function Customers() {
 
           <div className="flex justify-between items-center gap-3">
             <div className="rounded-full bg-gradient-to-b from-[#D3FFE7] via-[100%] to-[#EFFFF6] p-2 md:p-3 lg:p-5">
-              <PiDesktopLight className="w-10 h-10 text-[#00AC4F]" />
+              <PiDesktopLight className="w-7 h-7 lg:w-10 lg:h-10 text-[#00AC4F]" />
             </div>
             <div className="flex flex-col items-start gap-1">
               <p className="text-sm text-[#ACACAC] leading-5">Active Now</p>
-              <h1 className="font-semibold text-xl md:text-2xl lg:text-2xl leading-8 text-[#333333]">
+              <h1 className="font-semibold inline-flex gap-2 text-[16px] md:text-2xl lg:text-2xl leading-8 text-[#333333]">
                 189
+                <span className="flex md:hidden lg:hidden items-center gap-1 text-[#292D32] text-xs leading-4">
+                  <RiArrowUpLine className="text-green-500 w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" />
+                  <span className="text-green-500">16%</span>
+                  this month
+                </span>
               </h1>
-              <p className="flex items-center gap-1 text-[#292D32] text-xs leading-4">
-                <RiArrowUpLine className="text-green-500 w-5 h-5" />
+              <p className="items-center hidden md:flex lg:flex  gap-1 text-[#292D32] text-xs leading-4">
+                <RiArrowUpLine className="text-green-500 w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" />
                 <span className="text-green-500">16%</span>
                 this month
               </p>
@@ -156,7 +171,7 @@ function Customers() {
         </div>
 
         {/* data table */}
-        <div className="flex flex-col w-auto gap-4 bg-white p-2 md:p-3 lg:p-10 lg:py-9 rounded-xl shadow-lg">
+        <div className="flex flex-col w-[100%] gap-4 bg-white p-2 md:p-6 lg:p-10 overflow-x-auto lg:py-9 rounded-xl shadow-lg">
           {/* all customers */}
           <div className="flex justify-between items-center">
             <div className="flex flex-col gap-2">
@@ -191,13 +206,13 @@ function Customers() {
             </div>
           </div>
           {/* table section */}
-          <table className="table-auto md:overflow-x-scroll">
+          <table className="table-auto lg:w-full">
             <thead className="border-b-2 border-gray-200">
               <tr className="text-[#B5B7C0] text-[11px] md:text-[12px] lg:text-[14px]">
                 <th className="p-3 font-semibold tracking-wide text-left">
                   Customer Name
                 </th>
-                <th className="p-3 font-semibold tracking-wide text-left">
+                <th className="hidden sm:table-cell p-3 font-semibold tracking-wide text-left">
                   Company
                 </th>
                 <th className="p-3 font-semibold tracking-wide text-left">
@@ -206,7 +221,7 @@ function Customers() {
                 <th className="p-3 font-semibold tracking-wide text-left">
                   Email
                 </th>
-                <th className="p-3 font-semibold tracking-wide text-left">
+                <th className="hidden sm:table-cell p-3 font-semibold tracking-wide text-left">
                   Country
                 </th>
                 <th className="p-3 text-sm font-semibold tracking-wide text-left">
@@ -214,25 +229,25 @@ function Customers() {
                 </th>
               </tr>
             </thead>
-            <tbody className="overflow-y-scroll">
+            <tbody className="overflow-x-scroll">
               {tableData.map((data, i) => (
                 <tr key={i} className={`text-[#333333] hover:bg-gray-100`}>
-                  <td className="text-[0.5rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2">
+                  <td className="text-[0.6rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2">
                     {data.customer_name}
                   </td>
-                  <td className="text-[0.5rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2">
+                  <td className="hidden sm:table-cell text-[0.6rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2">
                     {data.company}
                   </td>
-                  <td className="text-[0.5rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2">
+                  <td className="text-[0.6rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2">
                     {data.phoneNumber}
                   </td>
-                  <td className="text-[0.5rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2">
+                  <td className="text-[0.6rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2">
                     {data.email}
                   </td>
-                  <td className="text-[0.5rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2">
+                  <td className="hidden sm:table-cell text-[0.6rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2">
                     {data.country}
                   </td>
-                  <td className="text-[0.5rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2 flex justify-center">
+                  <td className="text-[0.6rem] md:text-[12] lg:text-[14px] py-2 md:py-3 lg:py-4 px-1 md:px-1 lg:px-2 flex justify-center">
                     {data.isActive ? (
                       <span className="border border-[#008767] font-[500] bg-[#16C09861] w-[65px] md:w-[75px] lg:w-[80px] text-[10px] md:text-[12px] lg:text-[14px] py-1 px-4 rounded-[3px] text-[#008767]">
                         Active

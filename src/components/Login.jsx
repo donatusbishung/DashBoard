@@ -11,6 +11,7 @@ import {
   doSignInWithGoogle,
 } from "../Firebase/auth";
 import { useAuth } from "../contexts/AuthContext";
+import { toast } from "react-toastify";
 function Login() {
   // const { userLoggedIn } = useAuth();
   // console.log(useAuth);
@@ -35,6 +36,7 @@ function Login() {
       formData.email,
       formData.password
     );
+    toast.success("Verified");
     // console.log(res.user.uid);
     // console.log(res.user.uid);
 
@@ -52,7 +54,7 @@ function Login() {
   };
   return (
     <div>
-      <div className="flex flex-col gap-4 mt-7">
+      <div className="flex flex-col gap-4 mt-7 p-6 pt-0">
         <div className="social_links flex items-center gap-3">
           <div className="bg-grey-color cursor-pointer p-2 rounded-full">
             <FaApple style={{ width: "21.01px", height: "24.6px" }} />
@@ -122,8 +124,9 @@ function Login() {
           <button
             // onClick={handleNext}
             type="submit"
+            disabled={isSigningIn}
             className="p-3 bg-blue-hover cursor-pointer rounded-xl text-white font-[600] text-[16px] mb-0">
-            Login
+            {isSigningIn ? "Loging In" : "Login"}
           </button>
           <div className="flex items-center gap-2 mt-0">
             <input type="checkbox" className="h-[16px] w-[16p]" />

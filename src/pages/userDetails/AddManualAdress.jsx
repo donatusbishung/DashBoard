@@ -56,7 +56,7 @@ function AddManualAdress({
     }));
   };
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 p-6">
       <div className="flex justify-between">
         <div className="flex gap-5 items-center align-middle">
           <h2 className="font-bold text-[20px]">Add Address</h2>

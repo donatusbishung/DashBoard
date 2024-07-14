@@ -10,9 +10,9 @@ import PersonalInfo from "../pages/userDetails/PersonalInfo";
 import AddAddress from "../pages/userDetails/AddAddress";
 import AddManualAdress from "../pages/userDetails/AddManualAdress";
 import SuccessfulReg from "../pages/userDetails/SuccessfulReg";
+import { toast } from "react-toastify";
 
 function Register({ handlePrevious, handleNext, step }) {
-  // const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -38,14 +38,15 @@ function Register({ handlePrevious, handleNext, step }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("form submitted successfully");
+    // alert("form submitted successfully");
+    toast.success("Form submitted successfully", { position: "top-right" });
     // console.log(formData);
     handleNext();
   };
 
   return (
     <div
-      className="flex flex-col justify-center gap-4 register_section mt-7"
+      className="flex flex-col justify-center gap-4 register_section mt-1"
       style={{ font: "Commissioner" }}>
       {step === 1 && (
         <Registration

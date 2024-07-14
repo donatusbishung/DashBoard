@@ -5,7 +5,7 @@ import { LuUsers2, LuDollarSign, LuClock3 } from "react-icons/lu";
 
 function AddAddress({ handleNext, handlePrevious }) {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 p-6">
       <div className="flex justify-between">
         <div className="flex gap-5 items-center align-middle">
           <h2 className="font-bold text-[20px]">Add Address</h2>

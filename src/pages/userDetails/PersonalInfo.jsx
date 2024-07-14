@@ -49,7 +49,7 @@ function PersonalInfo({ formData, handleNext, handleChange, handlePrevious }) {
   };
 
   return (
-    <div className="flex flex-col gap-5 register_section">
+    <div className="flex flex-col gap-5 register_section p-6">
       <div className="flex justify-between">
         <div className="flex gap-5 items-center align-middle">
           <h2 className="font-bold text-[20px]">Personal information</h2>

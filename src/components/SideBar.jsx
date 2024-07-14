@@ -10,7 +10,7 @@ function SideBar() {
   const [open, setOpen] = useState(true);
   return (
     <div
-      className={`sideBar__section flex flex-col h-screen bg-white border-r shadow-md px-4 ${
+      className={`sideBar__section flex flex-col h-[100vh] bg-white border-r shadow-md px-4 ${
         open ? "w-[306px]" : "w-[102px] duration-500 transition-all"
       }`}>
       {/* logo section */}

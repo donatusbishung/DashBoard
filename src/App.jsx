@@ -8,10 +8,12 @@ import Income from "./pages/Income";
 import Promote from "./pages/Promote";
 import Help from "./pages/Help";
 import Login from "./components/Login";
-import Register from "./components/Register";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <>
+      <ToastContainer />
       <Router>
         <Routes>
           <Route path="/" Component={Authentication} />

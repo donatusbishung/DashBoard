@@ -7,7 +7,7 @@ import { BiX } from "react-icons/bi";
 import { useState } from "react";
 import { doCreateUserWithEmailAndPassword } from "../Firebase/auth";
 import { useAuth } from "../contexts/AuthContext";
-
+import { toast } from "react-toastify";
 function Registration({ formData, handleChange, handleNext, field }) {
   const [errors, setErrors] = useState({});
   const [isRegistring, setIsRegistring] = useState(false);
@@ -36,13 +36,17 @@ function Registration({ formData, handleChange, handleNext, field }) {
         formData.email,
         formData.password
       );
-      console.log("User created successfully:", res.user);
+      // console.log("User created successfully:", res.user);
+      toast.success("User created successfully", { position: "top-right" });
       handleNextStep(); // Proceed to the next step
     } catch (error) {
       console.error("Error creating user:", error);
+      toast.error("Error creating user: " + error.message, {
+        position: "top-right",
+      });
       setErrors((prevErrors) => ({
         ...prevErrors,
-        password: "Error creating user",
+        password: "",
       }));
       setIsRegistring(false);
     }
@@ -72,7 +76,7 @@ function Registration({ formData, handleChange, handleNext, field }) {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 p-5 md:p-6 lg:p-6">
       <div className="social_links flex items-center gap-3">
         <div className="bg-grey-color cursor-pointer p-2 rounded-full">
           <FaApple style={{ width: "21.01px", height: "24.6px" }} />
